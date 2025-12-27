@@ -158,8 +158,7 @@ class WordSearchGUIApp:
             game_screen.show()
 
         except GridGenerationError as e:
-            self.window.show_error("Grid Generation Error",
-                                  f"{e.user_message}\n\nPlease try different settings.")
+            self.window.show_error("Grid Generation Error", e.user_message)
             self.settings_screen.show()
 
         except WordSearchError as e:

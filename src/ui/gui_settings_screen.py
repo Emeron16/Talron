@@ -70,7 +70,7 @@ class SettingsScreen(BaseScreen):
         help_button = ttk.Button(
             nav_frame,
             text="Help (F1)",
-            command=lambda: self.parent._show_help(),
+            command=self.show_help_popup,
             style='Secondary.TButton'
         )
         help_button.grid(row=0, column=1, padx=5, sticky='w')

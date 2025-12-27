@@ -937,6 +937,32 @@
     }
   },
   "movies": {
+    "Aladdin": {
+      "character_words": [
+        "aladdin",
+        "jasmine",
+        "genie",
+        "jafar",
+        "abu",
+        "iago",
+        "sultan",
+        "rajah",
+        "carpet",
+        "razoul"
+      ],
+      "defining_words": [
+        "agrabah",
+        "lamp",
+        "magic",
+        "wish",
+        "cave",
+        "wonders",
+        "diamond",
+        "palace",
+        "street",
+        "thief"
+      ]
+    },
     "Alien": {
       "character_words": [
         "ripley",
@@ -1015,6 +1041,32 @@
         "clock"
       ]
     },
+    "Beauty and the Beast": {
+      "character_words": [
+        "belle",
+        "beast",
+        "gaston",
+        "maurice",
+        "lumiere",
+        "cogsworth",
+        "potts",
+        "chip",
+        "lefou",
+        "wardrobe"
+      ],
+      "defining_words": [
+        "rose",
+        "enchanted",
+        "castle",
+        "curse",
+        "library",
+        "ballroom",
+        "village",
+        "magic",
+        "spell",
+        "beauty"
+      ]
+    },
     "Braveheart": {
       "character_words": [
         "william",
@@ -1065,6 +1117,58 @@
         "tooth",
         "package",
         "plane"
+      ]
+    },
+    "Cinderella": {
+      "character_words": [
+        "cinderella",
+        "prince",
+        "charming",
+        "stepmother",
+        "anastasia",
+        "drizella",
+        "godmother",
+        "lucifer",
+        "bruno",
+        "king"
+      ],
+      "defining_words": [
+        "slipper",
+        "glass",
+        "ball",
+        "pumpkin",
+        "carriage",
+        "midnight",
+        "magic",
+        "castle",
+        "dress",
+        "fairy"
+      ]
+    },
+    "Coco": {
+      "character_words": [
+        "miguel",
+        "hector",
+        "ernesto",
+        "imelda",
+        "coco",
+        "dante",
+        "abuelita",
+        "mama",
+        "papa",
+        "pepita"
+      ],
+      "defining_words": [
+        "music",
+        "guitar",
+        "dead",
+        "remember",
+        "family",
+        "mexico",
+        "skeleton",
+        "marigold",
+        "bridge",
+        "musician"
       ]
     },
     "DC": {
@@ -1119,6 +1223,32 @@
         "christmas"
       ]
     },
+    "Encanto": {
+      "character_words": [
+        "mirabel",
+        "abuela",
+        "isabela",
+        "luisa",
+        "bruno",
+        "julieta",
+        "pepa",
+        "felix",
+        "camilo",
+        "dolores"
+      ],
+      "defining_words": [
+        "magic",
+        "casita",
+        "candle",
+        "gift",
+        "family",
+        "colombia",
+        "mountains",
+        "miracle",
+        "butterfly",
+        "flower"
+      ]
+    },
     "Fight Club": {
       "character_words": [
         "tyler",
@@ -1169,6 +1299,32 @@
         "pingpong",
         "football",
         "alabama"
+      ]
+    },
+    "Frozen": {
+      "character_words": [
+        "elsa",
+        "anna",
+        "kristoff",
+        "olaf",
+        "hans",
+        "sven",
+        "pabbie",
+        "marshmallow",
+        "oaken",
+        "kai"
+      ],
+      "defining_words": [
+        "ice",
+        "snow",
+        "winter",
+        "kingdom",
+        "arendelle",
+        "castle",
+        "frozen",
+        "heart",
+        "magic",
+        "sister"
       ]
     },
     "Ghostbusters": {
@@ -1247,6 +1403,32 @@
         "muggle",
         "house",
         "sorting"
+      ]
+    },
+    "Hunger Games": {
+      "character_words": [
+        "katniss",
+        "everdeen",
+        "peeta",
+        "mellark",
+        "gale",
+        "hawthorne",
+        "prim",
+        "finnick",
+        "plutarch",
+        "snow"
+      ],
+      "defining_words": [
+        "arena",
+        "district",
+        "tribute",
+        "mockingjay",
+        "revolution",
+        "survival",
+        "bow",
+        "arrow",
+        "capitol",
+        "cornucopia"
       ]
     },
     "Inception": {
@@ -1457,6 +1639,58 @@
         "rogue"
       ]
     },
+    "Moana": {
+      "character_words": [
+        "moana",
+        "maui",
+        "tala",
+        "gramma",
+        "sina",
+        "tui",
+        "chief",
+        "heihei",
+        "pua",
+        "tamatoa"
+      ],
+      "defining_words": [
+        "ocean",
+        "island",
+        "heart",
+        "tefiti",
+        "hook",
+        "demigod",
+        "voyager",
+        "coconut",
+        "reef",
+        "sail"
+      ]
+    },
+    "Mulan": {
+      "character_words": [
+        "mulan",
+        "mushu",
+        "shang",
+        "crikee",
+        "shan",
+        "yao",
+        "ling",
+        "chien",
+        "khan",
+        "emperor"
+      ],
+      "defining_words": [
+        "china",
+        "warrior",
+        "honor",
+        "dragon",
+        "sword",
+        "army",
+        "disguise",
+        "soldier",
+        "training",
+        "family"
+      ]
+    },
     "Pirates of the Caribbean": {
       "character_words": [
         "jack",
@@ -1561,6 +1795,32 @@
         "poster"
       ]
     },
+    "Shrek": {
+      "character_words": [
+        "shrek",
+        "fiona",
+        "donkey",
+        "farquaad",
+        "puss",
+        "boots",
+        "dragon",
+        "pinocchio",
+        "gingerbread",
+        "fairy"
+      ],
+      "defining_words": [
+        "swamp",
+        "ogre",
+        "layers",
+        "onion",
+        "duloc",
+        "castle",
+        "fairytale",
+        "dragon",
+        "tower",
+        "kingdom"
+      ]
+    },
     "Star Wars": {
       "character_words": [
         "luke",
@@ -1585,6 +1845,32 @@
         "death",
         "star",
         "tatooine"
+      ]
+    },
+    "Tangled": {
+      "character_words": [
+        "rapunzel",
+        "flynn",
+        "rider",
+        "gothel",
+        "maximus",
+        "pascal",
+        "stabbington",
+        "hook",
+        "hand",
+        "king"
+      ],
+      "defining_words": [
+        "tower",
+        "hair",
+        "golden",
+        "lantern",
+        "frying",
+        "pan",
+        "crown",
+        "kingdom",
+        "magic",
+        "flower"
       ]
     },
     "The Godfather": {
@@ -1637,6 +1923,32 @@
         "mouse",
         "electric",
         "chair"
+      ]
+    },
+    "The Lion King": {
+      "character_words": [
+        "simba",
+        "mufasa",
+        "nala",
+        "scar",
+        "timon",
+        "pumbaa",
+        "rafiki",
+        "zazu",
+        "sarabi",
+        "shenzi"
+      ],
+      "defining_words": [
+        "pride",
+        "rock",
+        "savanna",
+        "circle",
+        "life",
+        "king",
+        "hakuna",
+        "matata",
+        "hyena",
+        "kingdom"
       ]
     },
     "The Matrix": {

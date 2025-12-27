@@ -90,7 +90,8 @@ class WordPlacementError(GridGenerationError):
     def __init__(self, failed_words: int, total_words: int):
         super().__init__(
             f"Failed to place {failed_words} out of {total_words} words in grid",
-            "Unable to create a valid game board. Please try again or adjust settings."
+            "Unable to create a valid game board. The grid is too small for all the words.\n\n"
+            "Please increase the grid size settings or choose a different topic."
         )
         self.failed_words = failed_words
         self.total_words = total_words

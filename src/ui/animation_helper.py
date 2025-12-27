@@ -249,6 +249,106 @@ class ParticleEffect:
 
         fade()
 
+    def create_fireworks(self, duration: int = 2000, callback: Optional[Callable] = None):
+        """Create a fireworks display across the canvas.
+
+        Args:
+            duration: Total duration of fireworks display in ms.
+            callback: Optional callback when fireworks complete.
+        """
+        import random
+
+        # Get canvas dimensions
+        canvas_width = self.canvas.winfo_width()
+        canvas_height = self.canvas.winfo_height()
+
+        if canvas_width <= 1 or canvas_height <= 1:
+            # Canvas not rendered yet, use defaults
+            canvas_width = 800
+            canvas_height = 600
+
+        # Firework colors
+        colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8',
+                  '#F7DC6F', '#BB8FCE', '#85C1E2', '#F8B739', '#52B788']
+
+        fireworks_data = []
+        launch_times = [i * 200 for i in range(duration // 200)]  # Launch every 200ms
+
+        def launch_firework(delay=0):
+            """Launch a single firework."""
+            if delay >= duration:
+                if callback:
+                    callback()
+                return
+
+            # Random position in upper 2/3 of canvas
+            x = random.randint(int(canvas_width * 0.2), int(canvas_width * 0.8))
+            y = random.randint(int(canvas_height * 0.2), int(canvas_height * 0.6))
+            color = random.choice(colors)
+
+            # Create burst
+            self._create_firework_burst(x, y, color)
+
+            # Schedule next launch
+            self.canvas.after(200, lambda: launch_firework(delay + 200))
+
+        # Start the fireworks show
+        launch_firework()
+
+    def _create_firework_burst(self, x: int, y: int, color: str):
+        """Create a single firework burst.
+
+        Args:
+            x: X coordinate for burst center.
+            y: Y coordinate for burst center.
+            color: Firework color.
+        """
+        import random
+        import math
+
+        particle_count = random.randint(20, 35)
+        particles = []
+
+        # Create particles radiating outward
+        for i in range(particle_count):
+            angle = random.uniform(0, 2 * math.pi)
+            speed = random.uniform(3, 8)
+            size = random.randint(2, 5)
+
+            particle = self.canvas.create_oval(
+                x - size, y - size, x + size, y + size,
+                fill=color, outline=''
+            )
+            particles.append({
+                'id': particle,
+                'angle': angle,
+                'speed': speed,
+                'life': random.randint(15, 25),
+                'gravity': 0.15
+            })
+
+        # Animate particles
+        def animate():
+            for particle in particles[:]:
+                if particle['life'] <= 0:
+                    self.canvas.delete(particle['id'])
+                    particles.remove(particle)
+                else:
+                    # Move particle with gravity
+                    dx = math.cos(particle['angle']) * particle['speed']
+                    dy = math.sin(particle['angle']) * particle['speed'] + particle['gravity']
+
+                    self.canvas.move(particle['id'], dx, dy)
+
+                    # Apply gravity
+                    particle['speed'] *= 0.95  # Slow down
+                    particle['life'] -= 1
+
+            if particles:
+                self.canvas.after(50, animate)
+
+        animate()
+
     def cleanup(self):
         """Remove all particle effects."""
         for particle_id in self.particles:

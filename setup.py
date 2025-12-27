@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="Talron Word Search"
+    name="Talron Word Search",
     version="1.0.0",
     author="Emeron Marcelle",
     description="A themed word search puzzle game with modern GUI interface",

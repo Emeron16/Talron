@@ -158,7 +158,12 @@ class ResultsScreen(BaseScreen):
         )
         self.grid_widget.pack(pady=10, anchor='center')
 
-        # Show all unfound words on the grid
+        # Show all words on the grid (both found and unfound)
+        # First show found words
+        for word in self.game_grid.discovered_words:
+            self.grid_widget.mark_word_discovered(word)
+
+        # Then show unfound words in different color
         if len(self.game_grid.discovered_words) < len(self.game_grid.solution):
             self.grid_widget.show_all_unfound_words()
 

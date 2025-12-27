@@ -107,7 +107,7 @@ class MainWindow(tk.Tk):
 
         # Bind keyboard shortcuts
         self.bind('<Escape>', lambda e: self._on_closing())
-        self.bind('<F1>', lambda e: self._show_help())
+        self.bind('<F1>', lambda e: self._on_f1_pressed())
 
     def _create_music_control(self):
         """Create music control button."""
@@ -145,8 +145,17 @@ class MainWindow(tk.Tk):
             self.background_music.cleanup()
             self.destroy()
 
+    def _on_f1_pressed(self):
+        """Handle F1 key press to show help."""
+        # If there's a current screen and it has the show_help_popup method, call it
+        if self.current_screen and hasattr(self.current_screen, 'show_help_popup'):
+            self.current_screen.show_help_popup()
+        else:
+            # Fallback to old messagebox method if screen doesn't support overlay
+            self._show_help()
+
     def _show_help(self):
-        """Show help dialog with game instructions."""
+        """Show help dialog with game instructions (fallback method)."""
         help_text = """THEMED WORD SEARCH GAME - HELP
 
 OBJECTIVE:
@@ -154,8 +163,8 @@ Find all hidden words in the grid before time runs out!
 
 HOW TO PLAY:
 • Click and drag across adjacent letters to form words
-• Words can go in any direction (horizontal, vertical, diagonal)
-• Letters must be adjacent (including diagonally)
+• Words can only go horizontally or vertically
+• Letters must be adjacent (no diagonal connections)
 • Release mouse to submit your selection
 
 GAME FEATURES:
@@ -268,6 +277,102 @@ class BaseScreen(tk.Frame):
     def show(self):
         """Show this screen."""
         self.parent.show_screen(self)
+
+    def show_help_popup(self):
+        """Display help in an overlay window within the screen."""
+        # Create overlay frame that covers the center of the screen
+        overlay = tk.Frame(self, bg='#000000', bd=2, relief=tk.RAISED)
+        overlay.place(relx=0.5, rely=0.5, anchor='center', width=700, height=600)
+
+        # Inner frame with dark background
+        inner_frame = tk.Frame(overlay, bg='#1a1a2e', padx=20, pady=20)
+        inner_frame.pack(fill=tk.BOTH, expand=True)
+
+        # Title
+        title_label = ttk.Label(
+            inner_frame,
+            text="📖 How to Play",
+            style='Header.TLabel',
+            font=('Segoe UI', 20, 'bold')
+        )
+        title_label.pack(pady=(0, 10))
+
+        # Create scrollable text area for help content
+        text_frame = tk.Frame(inner_frame, bg='#1a1a2e')
+        text_frame.pack(fill=tk.BOTH, expand=True, pady=10)
+
+        # Scrollbar
+        scrollbar = ttk.Scrollbar(text_frame)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        # Text widget with help content
+        help_text = """THEMED WORD SEARCH GAME - HELP
+
+OBJECTIVE:
+Find all hidden words in the grid before time runs out!
+
+HOW TO PLAY:
+• Click and drag across adjacent letters to form words
+• Words can only go horizontally or vertically
+• Letters must be adjacent (no diagonal connections)
+• Release mouse to submit your selection
+
+GAME FEATURES:
+• Hints: Use hints to get clues about word locations
+• Sound: Toggle sound effects on/off during gameplay
+• Pause: Pause the game at any time
+• Different difficulty levels with varying grid sizes and time limits
+
+KEYBOARD SHORTCUTS:
+• ESC - Close window/Quit game
+• F1 - Show this help dialog
+
+SCORING:
+• Find more words for higher scores
+• Complete all words for a perfect game!
+• Bonus points for speed and difficulty level
+
+WORD TYPES:
+• Characters - Names of characters from the topic
+• Defining - Words that define or relate to the topic
+
+Good luck and have fun!"""
+
+        text_widget = tk.Text(
+            text_frame,
+            font=('Segoe UI', 12),
+            fg='#ECF0F1',
+            bg='#2c3e50',
+            wrap=tk.WORD,
+            padx=10,
+            pady=10,
+            yscrollcommand=scrollbar.set,
+            relief=tk.FLAT,
+            state=tk.NORMAL
+        )
+        text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.config(command=text_widget.yview)
+
+        # Insert help text
+        text_widget.insert('1.0', help_text)
+        text_widget.config(state=tk.DISABLED)  # Make read-only
+
+        # Close button
+        close_button = ttk.Button(
+            inner_frame,
+            text="Got It!",
+            command=lambda: overlay.destroy(),
+            style='Primary.TButton'
+        )
+        close_button.pack(pady=(10, 0))
+
+        # Auto-dismiss after 15 seconds
+        self.after(15000, lambda: overlay.destroy() if overlay.winfo_exists() else None)
+
+        # Bind Escape and Enter to close
+        overlay.bind('<Escape>', lambda e: overlay.destroy())
+        overlay.bind('<Return>', lambda e: overlay.destroy())
+        overlay.focus_set()
 
     def create_title(self, text: str) -> ttk.Label:
         """Create a title label.

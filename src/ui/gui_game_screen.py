@@ -203,7 +203,8 @@ class GameScreen(BaseScreen):
 
                 # Check if game is complete
                 if len(self.game_grid.discovered_words) == len(self.game_grid.solution):
-                    self._on_game_finished()
+                    # Perfect game! Show fireworks before transitioning
+                    self._show_perfect_game_celebration()
             else:
                 # Word already found
                 self.sound_manager.play_sound('invalid')
@@ -298,6 +299,40 @@ class GameScreen(BaseScreen):
         if self.timer_job:
             self.after_cancel(self.timer_job)
         self.on_game_complete()
+
+    def _show_perfect_game_celebration(self):
+        """Show fireworks animation for perfect game completion."""
+        # Stop the timer
+        self.timer_running = False
+        if self.timer_job:
+            self.after_cancel(self.timer_job)
+
+        # Create a transparent overlay frame
+        overlay_frame = tk.Frame(self, bg='#1a1a2e')
+        overlay_frame.place(x=0, y=0, relwidth=1, relheight=1)
+
+        # Create canvas for fireworks on top of the overlay
+        # Use empty string for bg to make it transparent (shows parent bg through)
+        fireworks_canvas = tk.Canvas(
+            overlay_frame,
+            highlightthickness=0,
+            bg='#1a1a2e'  # Match game background so it blends seamlessly
+        )
+        fireworks_canvas.pack(fill=tk.BOTH, expand=True)
+
+        # Create fireworks effect
+        from .animation_helper import ParticleEffect
+        particle_effect = ParticleEffect(fireworks_canvas)
+
+        # Show fireworks for 2.5 seconds, then transition to results
+        def on_fireworks_complete():
+            overlay_frame.destroy()
+            self.on_game_complete()
+
+        particle_effect.create_fireworks(duration=2500, callback=on_fireworks_complete)
+
+        # Play perfect game sound if available
+        self.sound_manager.play_sound('perfect')
 
     def _on_quit(self):
         """Handle quit button click."""
