@@ -132,6 +132,7 @@ class GameScreen(BaseScreen):
 
         self.words_listbox = tk.Listbox(list_frame, yscrollcommand=scrollbar.set,
                                         font=('Arial', 10), bg='#ECF0F1',
+                                        fg='#000000',  # Black text for visibility
                                         selectmode=tk.NONE)
         self.words_listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar.config(command=self.words_listbox.yview)
