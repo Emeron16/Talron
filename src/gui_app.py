@@ -15,6 +15,7 @@ from .services.game_controller import GameController
 from .services.selection_validator import SelectionValidator
 from .services.results_calculator import ResultsCalculator
 from .data.word_database import WordDatabase
+from .data.achievement_manager import AchievementManager
 from .models.core import GameSettings, GameStatus
 from .exceptions import (
     WordSearchError,
@@ -38,6 +39,7 @@ class WordSearchGUIApp:
             # Initialize game components
             self.game_controller = GameController()
             self.word_database = WordDatabase()
+            self.achievement_manager = AchievementManager()
             self.selection_validator = None
             self.results_calculator = ResultsCalculator()
 
@@ -60,7 +62,7 @@ class WordSearchGUIApp:
             self.topic_screen.show()
 
         except DatabaseError as e:
-            messagebox.showerror(
+            self.show_error(
                 "Database Error",
                 f"Failed to load game database:\n{e.user_message}\n\nThe application will now close."
             )
@@ -72,7 +74,8 @@ class WordSearchGUIApp:
         self.topic_screen = TopicSelectionScreen(
             self.window,
             self.word_database,
-            self._on_topic_selected
+            self._on_topic_selected,
+            achievement_manager=self.achievement_manager
         )
 
         # Settings screen
@@ -195,6 +198,14 @@ class WordSearchGUIApp:
             # Calculate results
             results = self.game_controller.calculate_game_results()
 
+            # Save achievement if better than existing
+            achievement_saved = self.achievement_manager.save_achievement(
+                self.current_topic,
+                self.current_subtopic,
+                results
+            )
+            results['new_achievement'] = achievement_saved
+
             # Show results screen
             results_screen = ResultsScreen(
                 self.window,
@@ -265,7 +276,7 @@ class WordSearchGUIApp:
         try:
             self.window.mainloop()
         except Exception as e:
-            messagebox.showerror(
+            self.window.show_error(
                 "Unexpected Error",
                 f"An unexpected error occurred:\n{str(e)}\n\n{traceback.format_exc()}"
             )
@@ -281,10 +292,17 @@ def main():
         # Already handled in __init__
         pass
     except Exception as e:
-        messagebox.showerror(
-            "Fatal Error",
-            f"A fatal error occurred:\n{str(e)}\n\nThe application will now close."
-        )
+        # For fatal errors before window is created, we need to use messagebox
+        try:
+            import tkinter as tk
+            root = tk.Tk()
+            root.withdraw()
+            messagebox.showerror(
+                "Fatal Error",
+                f"A fatal error occurred:\n{str(e)}\n\nThe application will now close."
+            )
+        except:
+            print(f"Fatal Error: {e}")
         raise
 
 

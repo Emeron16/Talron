@@ -1,7 +1,7 @@
 """Main GUI window for the themed word search game."""
 
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk
 from typing import Optional, Callable
 from ..models.core import Game, Grid, GameSettings
 from .video_background import VideoBackground
@@ -139,7 +139,7 @@ class MainWindow(tk.Tk):
 
     def _on_closing(self):
         """Handle window closing event."""
-        if messagebox.askokcancel("Quit", "Do you want to quit the game?"):
+        if self.ask_yes_no("Quit", "Do you want to quit the game?"):
             # Cleanup resources
             self.video_background.stop()
             self.background_music.cleanup()
@@ -151,44 +151,8 @@ class MainWindow(tk.Tk):
         if self.current_screen and hasattr(self.current_screen, 'show_help_popup'):
             self.current_screen.show_help_popup()
         else:
-            # Fallback to old messagebox method if screen doesn't support overlay
-            self._show_help()
-
-    def _show_help(self):
-        """Show help dialog with game instructions (fallback method)."""
-        help_text = """THEMED WORD SEARCH GAME - HELP
-
-OBJECTIVE:
-Find all hidden words in the grid before time runs out!
-
-HOW TO PLAY:
-• Click and drag across adjacent letters to form words
-• Words can only go horizontally or vertically
-• Letters must be adjacent (no diagonal connections)
-• Release mouse to submit your selection
-
-GAME FEATURES:
-• Hints: Use hints to get clues about word locations
-• Sound: Toggle sound effects on/off during gameplay
-• Pause: Pause the game at any time
-• Different difficulty levels with varying grid sizes and time limits
-
-KEYBOARD SHORTCUTS:
-• ESC - Close window/Quit game
-• F1 - Show this help dialog
-
-SCORING:
-• Find more words for higher scores
-• Complete all words for a perfect game!
-• Bonus points for speed and difficulty level
-
-WORD TYPES:
-• Characters - Names of characters from the topic
-• Defining - Words that define or relate to the topic
-
-Good luck and have fun!"""
-
-        messagebox.showinfo("Help - How to Play", help_text)
+            # Fallback to show_help_popup method in MainWindow
+            self.show_help_popup()
 
     def show_screen(self, screen_widget):
         """Show a new screen, hiding the current one.
@@ -227,7 +191,7 @@ Good luck and have fun!"""
             title: Error dialog title.
             message: Error message to display.
         """
-        messagebox.showerror(title, message)
+        self._show_popup_overlay("❌ " + title, message, "error")
 
     def show_info(self, title: str, message: str):
         """Show an information dialog.
@@ -236,7 +200,7 @@ Good luck and have fun!"""
             title: Info dialog title.
             message: Info message to display.
         """
-        messagebox.showinfo(title, message)
+        self._show_popup_overlay("ℹ️ " + title, message, "info")
 
     def show_warning(self, title: str, message: str):
         """Show a warning dialog.
@@ -245,7 +209,16 @@ Good luck and have fun!"""
             title: Warning dialog title.
             message: Warning message to display.
         """
-        messagebox.showwarning(title, message)
+        self._show_popup_overlay("⚠️ " + title, message, "warning")
+
+    def show_message(self, title: str, message: str):
+        """Show a generic message dialog.
+
+        Args:
+            title: Dialog title.
+            message: Message to display.
+        """
+        self._show_popup_overlay(title, message, "info")
 
     def ask_yes_no(self, title: str, message: str) -> bool:
         """Show a yes/no dialog.
@@ -257,7 +230,139 @@ Good luck and have fun!"""
         Returns:
             True if yes, False if no.
         """
-        return messagebox.askyesno(title, message)
+        return self._show_yes_no_overlay(title, message)
+
+    def _show_popup_overlay(self, title: str, message: str, popup_type: str = "info"):
+        """Show a popup overlay window.
+
+        Args:
+            title: Dialog title.
+            message: Message to display.
+            popup_type: Type of popup ("info", "warning", "error").
+        """
+        # Create overlay frame
+        overlay = tk.Frame(self, bg='#000000', bd=2, relief=tk.RAISED)
+        overlay.place(relx=0.5, rely=0.5, anchor='center', width=500, height=300)
+
+        # Inner frame with dark background
+        inner_frame = tk.Frame(overlay, bg='#1a1a2e', padx=30, pady=30)
+        inner_frame.pack(fill=tk.BOTH, expand=True)
+
+        # Title
+        title_label = ttk.Label(
+            inner_frame,
+            text=title,
+            style='Header.TLabel',
+            font=('Segoe UI', 18, 'bold')
+        )
+        title_label.pack(pady=(0, 20))
+
+        # Message
+        message_label = ttk.Label(
+            inner_frame,
+            text=message,
+            font=('Segoe UI', 12),
+            justify=tk.CENTER,
+            wraplength=420
+        )
+        message_label.pack(pady=(0, 30))
+
+        # OK button
+        ok_button = ttk.Button(
+            inner_frame,
+            text="OK",
+            command=lambda: overlay.destroy(),
+            style='Primary.TButton'
+        )
+        ok_button.pack()
+
+        # Auto-dismiss for non-error messages
+        if popup_type != "error":
+            self.after(5000, lambda: overlay.destroy() if overlay.winfo_exists() else None)
+
+        # Bind Escape and Enter to close
+        overlay.bind('<Escape>', lambda e: overlay.destroy())
+        overlay.bind('<Return>', lambda e: overlay.destroy())
+        overlay.focus_set()
+
+    def _show_yes_no_overlay(self, title: str, message: str) -> bool:
+        """Show a yes/no overlay dialog.
+
+        Args:
+            title: Dialog title.
+            message: Question to ask.
+
+        Returns:
+            True if yes, False if no.
+        """
+        result = [False]  # Use list to allow modification in nested function
+
+        # Create overlay frame
+        overlay = tk.Frame(self, bg='#000000', bd=2, relief=tk.RAISED)
+        overlay.place(relx=0.5, rely=0.5, anchor='center', width=500, height=300)
+
+        # Inner frame with dark background
+        inner_frame = tk.Frame(overlay, bg='#1a1a2e', padx=30, pady=30)
+        inner_frame.pack(fill=tk.BOTH, expand=True)
+
+        # Title
+        title_label = ttk.Label(
+            inner_frame,
+            text=title,
+            style='Header.TLabel',
+            font=('Segoe UI', 18, 'bold')
+        )
+        title_label.pack(pady=(0, 20))
+
+        # Message
+        message_label = ttk.Label(
+            inner_frame,
+            text=message,
+            font=('Segoe UI', 12),
+            justify=tk.CENTER,
+            wraplength=420
+        )
+        message_label.pack(pady=(0, 30))
+
+        # Button frame
+        button_frame = tk.Frame(inner_frame, bg='#1a1a2e')
+        button_frame.pack()
+
+        def on_yes():
+            result[0] = True
+            overlay.destroy()
+
+        def on_no():
+            result[0] = False
+            overlay.destroy()
+
+        # No button
+        no_button = ttk.Button(
+            button_frame,
+            text="No",
+            command=on_no,
+            style='Secondary.TButton'
+        )
+        no_button.pack(side=tk.LEFT, padx=10)
+
+        # Yes button
+        yes_button = ttk.Button(
+            button_frame,
+            text="Yes",
+            command=on_yes,
+            style='Primary.TButton'
+        )
+        yes_button.pack(side=tk.LEFT, padx=10)
+
+        # Bind Escape to No
+        overlay.bind('<Escape>', lambda e: on_no())
+        overlay.bind('<Return>', lambda e: on_yes())
+        overlay.focus_set()
+
+        # Wait for user interaction
+        self.wait_window(overlay)
+
+        return result[0]
 
 
 class BaseScreen(tk.Frame):

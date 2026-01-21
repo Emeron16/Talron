@@ -103,32 +103,6 @@
         "spear"
       ]
     },
-    "Berserk": {
-      "character_words": [
-        "guts",
-        "griffith",
-        "casca",
-        "puck",
-        "serpico",
-        "farnese",
-        "isidro",
-        "schierke",
-        "zodd",
-        "skull"
-      ],
-      "defining_words": [
-        "sword",
-        "mercenary",
-        "dragon",
-        "slayer",
-        "apostle",
-        "eclipse",
-        "brand",
-        "sacrifice",
-        "berserker",
-        "armor"
-      ]
-    },
     "Black Clover": {
       "character_words": [
         "asta",
@@ -415,7 +389,7 @@
         "invention"
       ]
     },
-    "Dragon Ball": {
+    "Dragon Ball Z": {
       "character_words": [
         "goku",
         "vegeta",
@@ -436,9 +410,8 @@
         "power",
         "level",
         "fusion",
-        "training",
-        "earth",
-        "namek"
+        "namek",
+        "super"
       ]
     },
     "Erased": {
@@ -998,7 +971,12 @@
         "jessie",
         "james",
         "meowth",
-        "gary"
+        "gary",
+        "professor",
+        "oak",
+        "charizard",
+        "bulbasaur",
+        "squirtle"
       ],
       "defining_words": [
         "pokeball",
@@ -1010,7 +988,11 @@
         "johto",
         "kanto",
         "pokedex",
-        "evolution"
+        "evolution",
+        "battle",
+        "legendary",
+        "pokemon",
+        "mega"
       ]
     },
     "Ranking of Kings": {
@@ -1428,32 +1410,6 @@
         "braided",
         "thread"
       ]
-    },
-    "Yu Yu Hakusho": {
-      "character_words": [
-        "yusuke",
-        "kuwabara",
-        "kurama",
-        "hiei",
-        "botan",
-        "koenma",
-        "genkai",
-        "toguro",
-        "keiko",
-        "yukina"
-      ],
-      "defining_words": [
-        "spirit",
-        "detective",
-        "demon",
-        "reikai",
-        "energy",
-        "tournament",
-        "youkai",
-        "sword",
-        "rose",
-        "portal"
-      ]
     }
   },
   "movies": {
@@ -1587,58 +1543,6 @@
         "beauty"
       ]
     },
-    "Black Panther": {
-      "character_words": [
-        "tchalla",
-        "killmonger",
-        "shuri",
-        "nakia",
-        "okoye",
-        "mbaku",
-        "ramonda",
-        "ross",
-        "zuri",
-        "klaue"
-      ],
-      "defining_words": [
-        "wakanda",
-        "vibranium",
-        "panther",
-        "suit",
-        "warrior",
-        "king",
-        "throne",
-        "tribe",
-        "spear",
-        "forever"
-      ]
-    },
-    "Blade Runner": {
-      "character_words": [
-        "deckard",
-        "rachel",
-        "roy",
-        "batty",
-        "gaff",
-        "bryant",
-        "pris",
-        "leon",
-        "tyrell",
-        "holden"
-      ],
-      "defining_words": [
-        "replicant",
-        "blade",
-        "runner",
-        "android",
-        "tears",
-        "rain",
-        "future",
-        "noir",
-        "test",
-        "city"
-      ]
-    },
     "Braveheart": {
       "character_words": [
         "william",
@@ -1663,32 +1567,6 @@
         "warrior",
         "braveheart",
         "highland"
-      ]
-    },
-    "Casino Royale": {
-      "character_words": [
-        "bond",
-        "vesper",
-        "lynd",
-        "chiffre",
-        "mathis",
-        "felix",
-        "leiter",
-        "solange",
-        "dimitrios",
-        "mendel"
-      ],
-      "defining_words": [
-        "poker",
-        "casino",
-        "royale",
-        "spy",
-        "aston",
-        "martin",
-        "villain",
-        "betrayal",
-        "gamble",
-        "stakes"
       ]
     },
     "Cast Away": {
@@ -1821,58 +1699,6 @@
         "christmas"
       ]
     },
-    "E.T.": {
-      "character_words": [
-        "elliott",
-        "gertie",
-        "michael",
-        "mary",
-        "keys",
-        "tyler",
-        "steve",
-        "greg",
-        "pretty",
-        "harvey"
-      ],
-      "defining_words": [
-        "alien",
-        "phone",
-        "home",
-        "bicycle",
-        "moon",
-        "finger",
-        "spaceship",
-        "suburban",
-        "reese",
-        "pieces"
-      ]
-    },
-    "Elf": {
-      "character_words": [
-        "buddy",
-        "jovie",
-        "walter",
-        "emily",
-        "michael",
-        "papa",
-        "miles",
-        "finch",
-        "ming",
-        "deb"
-      ],
-      "defining_words": [
-        "elf",
-        "north",
-        "pole",
-        "santa",
-        "christmas",
-        "syrup",
-        "narwhal",
-        "mailroom",
-        "snowball",
-        "nyc"
-      ]
-    },
     "Encanto": {
       "character_words": [
         "mirabel",
@@ -1923,32 +1749,6 @@
         "narrator",
         "basement",
         "rules"
-      ]
-    },
-    "Finding Nemo": {
-      "character_words": [
-        "nemo",
-        "marlin",
-        "dory",
-        "gill",
-        "nigel",
-        "bruce",
-        "anchor",
-        "crush",
-        "squirt",
-        "peach"
-      ],
-      "defining_words": [
-        "fish",
-        "ocean",
-        "reef",
-        "sydney",
-        "clownfish",
-        "dentist",
-        "tank",
-        "current",
-        "shark",
-        "turtle"
       ]
     },
     "Forrest Gump": {
@@ -2053,32 +1853,6 @@
         "honor",
         "vengeance",
         "general"
-      ]
-    },
-    "Good Will Hunting": {
-      "character_words": [
-        "will",
-        "hunting",
-        "sean",
-        "maguire",
-        "skylar",
-        "chuckie",
-        "lambeau",
-        "morgan",
-        "billy",
-        "tom"
-      ],
-      "defining_words": [
-        "genius",
-        "janitor",
-        "math",
-        "theorem",
-        "therapy",
-        "boston",
-        "blackboard",
-        "equation",
-        "park",
-        "bench"
       ]
     },
     "Harry Potter": {
@@ -2237,58 +2011,6 @@
         "mission"
       ]
     },
-    "Jaws": {
-      "character_words": [
-        "brody",
-        "quint",
-        "hooper",
-        "ellen",
-        "vaughn",
-        "meadows",
-        "hendricks",
-        "kintner",
-        "chrissie",
-        "ben"
-      ],
-      "defining_words": [
-        "shark",
-        "jaws",
-        "ocean",
-        "boat",
-        "amity",
-        "island",
-        "beach",
-        "attack",
-        "barrel",
-        "cage"
-      ]
-    },
-    "John Wick": {
-      "character_words": [
-        "john",
-        "wick",
-        "winston",
-        "charon",
-        "viggo",
-        "iosef",
-        "marcus",
-        "perkins",
-        "aurelio",
-        "santino"
-      ],
-      "defining_words": [
-        "assassin",
-        "dog",
-        "puppy",
-        "pencil",
-        "coin",
-        "marker",
-        "hotel",
-        "revenge",
-        "hitman",
-        "excommunic"
-      ]
-    },
     "Jurassic Park": {
       "character_words": [
         "alan",
@@ -2313,32 +2035,6 @@
         "theory",
         "carnivore",
         "herbivore"
-      ]
-    },
-    "Kung Fu Panda": {
-      "character_words": [
-        "panda",
-        "shifu",
-        "tigress",
-        "viper",
-        "mantis",
-        "crane",
-        "monkey",
-        "oogway",
-        "tailung",
-        "zeng"
-      ],
-      "defining_words": [
-        "dragon",
-        "warrior",
-        "kung",
-        "noodle",
-        "scroll",
-        "master",
-        "jade",
-        "palace",
-        "dumpling",
-        "valley"
       ]
     },
     "Lord of the Rings": {
@@ -2391,32 +2087,6 @@
         "vibranium",
         "infinity",
         "stones"
-      ]
-    },
-    "Mean Girls": {
-      "character_words": [
-        "cady",
-        "regina",
-        "gretchen",
-        "karen",
-        "janis",
-        "damian",
-        "aaron",
-        "kevin",
-        "norbury",
-        "duvall"
-      ],
-      "defining_words": [
-        "plastic",
-        "fetch",
-        "wednesday",
-        "pink",
-        "burnbook",
-        "halloween",
-        "mathlete",
-        "cafeteria",
-        "limit",
-        "school"
       ]
     },
     "Mission Impossible": {
@@ -2549,32 +2219,6 @@
         "samurai"
       ]
     },
-    "Ratatouille": {
-      "character_words": [
-        "remy",
-        "linguini",
-        "colette",
-        "skinner",
-        "ego",
-        "gusteau",
-        "emile",
-        "django",
-        "larousse",
-        "horst"
-      ],
-      "defining_words": [
-        "rat",
-        "chef",
-        "paris",
-        "restaurant",
-        "cooking",
-        "kitchen",
-        "critic",
-        "ratatouille",
-        "dish",
-        "garbage"
-      ]
-    },
     "Rocky": {
       "character_words": [
         "rocky",
@@ -2599,32 +2243,6 @@
         "gloves",
         "knockout",
         "philadelphia"
-      ]
-    },
-    "Scarface": {
-      "character_words": [
-        "tony",
-        "montana",
-        "manny",
-        "elvira",
-        "gina",
-        "frank",
-        "lopez",
-        "mel",
-        "bernstein",
-        "omar"
-      ],
-      "defining_words": [
-        "cocaine",
-        "miami",
-        "cuban",
-        "mansion",
-        "chainsaw",
-        "tiger",
-        "world",
-        "crime",
-        "power",
-        "scarface"
       ]
     },
     "Shawshank Redemption": {
@@ -2679,32 +2297,6 @@
         "kingdom"
       ]
     },
-    "Spiderman": {
-      "character_words": [
-        "peter",
-        "parker",
-        "mary",
-        "jane",
-        "goblin",
-        "otto",
-        "octavius",
-        "harry",
-        "osborn",
-        "may"
-      ],
-      "defining_words": [
-        "spider",
-        "web",
-        "swinging",
-        "radioactive",
-        "bite",
-        "mask",
-        "photograph",
-        "newspaper",
-        "skyscraper",
-        "queens"
-      ]
-    },
     "Star Wars": {
       "character_words": [
         "luke",
@@ -2757,32 +2349,6 @@
         "flower"
       ]
     },
-    "The Dark Knight": {
-      "character_words": [
-        "batman",
-        "bruce",
-        "wayne",
-        "joker",
-        "harvey",
-        "dent",
-        "rachel",
-        "dawes",
-        "alfred",
-        "gordon"
-      ],
-      "defining_words": [
-        "gotham",
-        "chaos",
-        "clown",
-        "knight",
-        "dark",
-        "batmobile",
-        "cape",
-        "pencil",
-        "trick",
-        "vigilante"
-      ]
-    },
     "The Godfather": {
       "character_words": [
         "vito",
@@ -2809,32 +2375,6 @@
         "horse"
       ]
     },
-    "The Grand Budapest Hotel": {
-      "character_words": [
-        "gustave",
-        "zero",
-        "agatha",
-        "dmitri",
-        "henckels",
-        "jopling",
-        "madame",
-        "kovacs",
-        "serge",
-        "ludwig"
-      ],
-      "defining_words": [
-        "hotel",
-        "concierge",
-        "lobby",
-        "pastry",
-        "mendl",
-        "painting",
-        "inheritance",
-        "europe",
-        "pink",
-        "vintage"
-      ]
-    },
     "The Green Mile": {
       "character_words": [
         "paul",
@@ -2859,32 +2399,6 @@
         "mouse",
         "electric",
         "chair"
-      ]
-    },
-    "The Incredibles": {
-      "character_words": [
-        "bob",
-        "helen",
-        "dash",
-        "violet",
-        "jack",
-        "syndrome",
-        "frozone",
-        "edna",
-        "mirage",
-        "gilbert"
-      ],
-      "defining_words": [
-        "super",
-        "hero",
-        "elastic",
-        "strength",
-        "speed",
-        "invisible",
-        "force",
-        "field",
-        "cape",
-        "family"
       ]
     },
     "The Lion King": {
@@ -2937,58 +2451,6 @@
         "bullet",
         "time",
         "awakening"
-      ]
-    },
-    "The Notebook": {
-      "character_words": [
-        "noah",
-        "allie",
-        "lon",
-        "hammond",
-        "anne",
-        "frank",
-        "martha",
-        "fin",
-        "sarah",
-        "gus"
-      ],
-      "defining_words": [
-        "notebook",
-        "love",
-        "romance",
-        "rain",
-        "kiss",
-        "dock",
-        "house",
-        "summer",
-        "alzheimers",
-        "memory"
-      ]
-    },
-    "The Prestige": {
-      "character_words": [
-        "angier",
-        "borden",
-        "cutter",
-        "olivia",
-        "julia",
-        "fallon",
-        "root",
-        "tesla",
-        "alley",
-        "jess"
-      ],
-      "defining_words": [
-        "magic",
-        "trick",
-        "illusion",
-        "prestige",
-        "magician",
-        "teleport",
-        "clone",
-        "rival",
-        "stage",
-        "sacrifice"
       ]
     },
     "The Shining": {
@@ -3068,137 +2530,32 @@
         "callsign",
         "helmet"
       ]
-    },
-    "Toy Story": {
-      "character_words": [
-        "woody",
-        "buzz",
-        "lightyear",
-        "jessie",
-        "rex",
-        "hamm",
-        "slinky",
-        "potato",
-        "head",
-        "sid"
-      ],
-      "defining_words": [
-        "toy",
-        "cowboy",
-        "spaceman",
-        "andy",
-        "infinity",
-        "beyond",
-        "alien",
-        "claw",
-        "playroom",
-        "snake"
-      ]
     }
   },
   "shows": {
-    "Arrested Development": {
+    "A Different World": {
       "character_words": [
-        "michael",
-        "gob",
-        "lindsay",
-        "tobias",
-        "buster",
-        "lucille",
-        "george",
-        "maeby",
-        "oscar",
-        "annyong"
-      ],
-      "defining_words": [
-        "bluth",
-        "company",
-        "banana",
-        "stand",
-        "frozen",
-        "stair",
-        "car",
-        "chicken",
-        "dance",
-        "narrator"
-      ]
-    },
-    "Band of Brothers": {
-      "character_words": [
-        "winters",
-        "nixon",
-        "lipton",
-        "speirs",
-        "guarnere",
-        "malarkey",
-        "webster",
-        "roe",
-        "sobel",
-        "luz"
-      ],
-      "defining_words": [
-        "war",
-        "paratrooper",
-        "normandy",
-        "easy",
-        "company",
-        "jump",
-        "soldier",
-        "battle",
-        "airborne",
-        "division"
-      ]
-    },
-    "Better Call Saul": {
-      "character_words": [
-        "jimmy",
-        "mcgill",
+        "dwayne",
+        "whitley",
+        "denise",
+        "ron",
+        "freddie",
+        "jaleesa",
         "kim",
-        "wexler",
-        "chuck",
-        "howard",
-        "hamlin",
-        "nacho",
-        "varga",
-        "lalo"
+        "colonel",
+        "kinu",
+        "lena"
       ],
       "defining_words": [
-        "lawyer",
-        "saul",
-        "goodman",
-        "hustle",
-        "cartel",
-        "law",
-        "firm",
-        "scam",
-        "cinnabon",
-        "gene"
-      ]
-    },
-    "Billions": {
-      "character_words": [
-        "bobby",
-        "axelrod",
-        "chuck",
-        "rhoades",
-        "wendy",
-        "taylor",
-        "wags",
-        "dollar",
-        "bill",
-        "mafee"
-      ],
-      "defining_words": [
-        "hedge",
-        "fund",
-        "billion",
-        "money",
-        "wall",
-        "street",
-        "finance",
-        "trade",
-        "attorney",
-        "power"
+        "hillman",
+        "college",
+        "campus",
+        "student",
+        "dormitory",
+        "education",
+        "friendship",
+        "spinoff",
+        "wisdom"
       ]
     },
     "Black Mirror": {
@@ -3279,108 +2636,29 @@
         "squad"
       ]
     },
-    "Chernobyl": {
+    "Everybody Hates Chris": {
       "character_words": [
-        "legasov",
-        "shcherbina",
-        "khomyuk",
-        "dyatlov",
-        "akimov",
-        "toptunov",
-        "bryukhanov",
-        "fomin",
-        "ignatenko",
-        "sitnikov"
+        "chris",
+        "julius",
+        "rochelle",
+        "drew",
+        "tonya",
+        "greg",
+        "caruso",
+        "miss",
+        "morello",
+        "peaches"
       ],
       "defining_words": [
-        "nuclear",
-        "reactor",
-        "radiation",
-        "disaster",
-        "soviet",
-        "pripyat",
-        "graphite",
-        "roentgen",
-        "meltdown",
-        "chernobyl"
-      ]
-    },
-    "Community": {
-      "character_words": [
-        "jeff",
-        "britta",
-        "abed",
-        "troy",
-        "annie",
-        "shirley",
-        "pierce",
-        "dean",
-        "pelton",
-        "chang"
-      ],
-      "defining_words": [
-        "greendale",
-        "college",
-        "study",
-        "group",
-        "paintball",
-        "inspector",
-        "spacetime",
-        "darkest",
-        "timeline",
-        "pop"
-      ]
-    },
-    "Dexter": {
-      "character_words": [
-        "dexter",
-        "debra",
-        "morgan",
-        "rita",
-        "bennett",
-        "doakes",
-        "laguerta",
-        "masuka",
-        "quinn",
-        "batista"
-      ],
-      "defining_words": [
-        "serial",
-        "killer",
-        "blood",
-        "analyst",
-        "miami",
-        "metro",
-        "police",
-        "code",
-        "harry",
-        "vigilante"
-      ]
-    },
-    "Doctor Who": {
-      "character_words": [
-        "doctor",
-        "rose",
-        "martha",
-        "donna",
-        "amy",
-        "rory",
-        "clara",
-        "river",
-        "song",
-        "missy"
-      ],
-      "defining_words": [
-        "tardis",
-        "time",
-        "lord",
-        "dalek",
-        "sonic",
-        "screwdriver",
-        "gallifrey",
-        "cyberman",
-        "regenerate",
-        "companion"
+        "brooklyn",
+        "narrator",
+        "family",
+        "school",
+        "budget",
+        "childhood",
+        "struggle",
+        "comedy",
+        "bedstuy"
       ]
     },
     "FBI": {
@@ -3408,82 +2686,29 @@
         "operation"
       ]
     },
-    "Fargo": {
+    "Family Matters": {
       "character_words": [
-        "lester",
-        "nygaard",
-        "lorne",
-        "malvo",
-        "molly",
-        "solverson",
-        "lou",
-        "gus",
-        "grimly",
-        "stavros"
+        "steve",
+        "urkel",
+        "carl",
+        "winslow",
+        "harriette",
+        "eddie",
+        "laura",
+        "myra",
+        "stefan",
+        "estelle"
       ],
       "defining_words": [
-        "minnesota",
-        "snow",
-        "murder",
-        "crime",
-        "rural",
-        "accent",
-        "insurance",
-        "violence",
-        "frozen",
-        "winter"
-      ]
-    },
-    "Firefly": {
-      "character_words": [
-        "mal",
-        "reynolds",
-        "zoe",
-        "wash",
-        "kaylee",
-        "jayne",
-        "inara",
-        "simon",
-        "river",
-        "book"
-      ],
-      "defining_words": [
-        "serenity",
-        "spaceship",
-        "crew",
-        "alliance",
-        "brown",
-        "coat",
-        "cargo",
-        "verse",
-        "firefly",
-        "outlaw"
-      ]
-    },
-    "Fleabag": {
-      "character_words": [
-        "fleabag",
-        "claire",
-        "boo",
-        "martin",
-        "godmother",
-        "priest",
-        "harry",
-        "hilary",
-        "dad",
-        "jake"
-      ],
-      "defining_words": [
-        "london",
-        "cafe",
-        "guinea",
-        "pig",
-        "wall",
-        "fourth",
-        "sister",
-        "comedy",
-        "drinking",
-        "priest"
+        "nerd",
+        "chicago",
+        "family",
+        "neighbor",
+        "glasses",
+        "suspenders",
+        "cheese",
+        "sitcom",
+        "gadget"
       ]
     },
     "Friends": {
@@ -3564,32 +2789,6 @@
         "beirut"
       ]
     },
-    "House": {
-      "character_words": [
-        "house",
-        "wilson",
-        "cuddy",
-        "cameron",
-        "chase",
-        "foreman",
-        "thirteen",
-        "taub",
-        "kutner",
-        "adams"
-      ],
-      "defining_words": [
-        "doctor",
-        "diagnosis",
-        "hospital",
-        "cane",
-        "vicodin",
-        "team",
-        "patient",
-        "medicine",
-        "sarcasm",
-        "clinic"
-      ]
-    },
     "House of Cards": {
       "character_words": [
         "frank",
@@ -3614,6 +2813,81 @@
         "manipulation",
         "betrayal",
         "ambition"
+      ]
+    },
+    "Jamie Foxx Show": {
+      "character_words": [
+        "jamie",
+        "king",
+        "francesca",
+        "helen",
+        "braxton",
+        "fancy",
+        "rey",
+        "junior",
+        "nicole",
+        "silas"
+      ],
+      "defining_words": [
+        "hotel",
+        "uncle",
+        "aspiring",
+        "actor",
+        "comedy",
+        "california",
+        "texas",
+        "showbiz",
+        "nephew"
+      ]
+    },
+    "Kenan & Kel": {
+      "character_words": [
+        "kenan",
+        "kel",
+        "roger",
+        "sheryl",
+        "kyra",
+        "chris",
+        "potter",
+        "marc",
+        "cram",
+        "headley"
+      ],
+      "defining_words": [
+        "grocery",
+        "store",
+        "orange",
+        "soda",
+        "friends",
+        "chicago",
+        "mishaps",
+        "comedy",
+        "trouble"
+      ]
+    },
+    "Living Single": {
+      "character_words": [
+        "khadijah",
+        "synclaire",
+        "regine",
+        "maxine",
+        "kyle",
+        "overton",
+        "scooter",
+        "tripp",
+        "laverne",
+        "russell"
+      ],
+      "defining_words": [
+        "brooklyn",
+        "magazine",
+        "friends",
+        "apartment",
+        "career",
+        "romance",
+        "single",
+        "flavor",
+        "comedy"
       ]
     },
     "Lost": {
@@ -3668,56 +2942,79 @@
         "smoking"
       ]
     },
-    "Money Heist": {
+    "Martin": {
       "character_words": [
-        "professor",
-        "berlin",
-        "tokyo",
-        "rio",
-        "nairobi",
-        "denver",
-        "helsinki",
-        "oslo",
-        "moscow",
-        "raquel"
+        "martin",
+        "payne",
+        "gina",
+        "waters",
+        "tommy",
+        "cole",
+        "pam",
+        "sheneneh",
+        "bruh",
+        "man"
       ],
       "defining_words": [
-        "heist",
-        "bank",
-        "mask",
-        "red",
-        "jumpsuit",
-        "bella",
-        "ciao",
-        "gold",
-        "plan",
-        "robbery"
+        "radio",
+        "host",
+        "detroit",
+        "comedy",
+        "couple",
+        "friends",
+        "apartment",
+        "character",
+        "hilarious"
       ]
     },
-    "Mr Robot": {
+    "Moesha": {
       "character_words": [
-        "elliot",
-        "alderson",
-        "robot",
-        "darlene",
-        "angela",
-        "moss",
-        "tyrell",
-        "wellick",
-        "price",
-        "philip"
+        "moesha",
+        "frank",
+        "dee",
+        "myles",
+        "kim",
+        "niecy",
+        "hakeem",
+        "andell",
+        "dorian",
+        "jerome"
       ],
       "defining_words": [
-        "hacker",
-        "fsociety",
-        "code",
-        "cyber",
-        "security",
-        "hack",
-        "anonymous",
-        "mask",
-        "conglomerate",
-        "allsafe"
+        "teenager",
+        "family",
+        "school",
+        "friends",
+        "california",
+        "drama",
+        "stepmother",
+        "issues",
+        "growth"
+      ]
+    },
+    "My Wife and Kids": {
+      "character_words": [
+        "michael",
+        "kyle",
+        "jay",
+        "junior",
+        "claire",
+        "kady",
+        "franklin",
+        "vanessa",
+        "tony",
+        "calvin"
+      ],
+      "defining_words": [
+        "family",
+        "father",
+        "children",
+        "parenting",
+        "suburban",
+        "wisdom",
+        "comedy",
+        "household",
+        "advice"
       ]
     },
     "Narcos": {
@@ -3744,6 +3041,31 @@
         "smuggling",
         "plata",
         "plomo"
+      ]
+    },
+    "One on One": {
+      "character_words": [
+        "flex",
+        "breanna",
+        "spirit",
+        "arnaz",
+        "duane",
+        "natasha",
+        "candy",
+        "lisa",
+        "jerome",
+        "quinn"
+      ],
+      "defining_words": [
+        "father",
+        "daughter",
+        "single",
+        "parent",
+        "sportscaster",
+        "baltimore",
+        "teenager",
+        "humor",
+        "family"
       ]
     },
     "Ozark": {
@@ -3824,58 +3146,6 @@
         "whiskey"
       ]
     },
-    "Prison Break": {
-      "character_words": [
-        "michael",
-        "scofield",
-        "lincoln",
-        "burrows",
-        "sara",
-        "tancredi",
-        "sucre",
-        "bellick",
-        "mahone",
-        "abruzzi"
-      ],
-      "defining_words": [
-        "prison",
-        "escape",
-        "tattoo",
-        "blueprint",
-        "fox",
-        "river",
-        "company",
-        "conspiracy",
-        "tunnel",
-        "break"
-      ]
-    },
-    "Scrubs": {
-      "character_words": [
-        "dorian",
-        "turk",
-        "elliot",
-        "carla",
-        "perry",
-        "cox",
-        "kelso",
-        "janitor",
-        "doug",
-        "todd"
-      ],
-      "defining_words": [
-        "hospital",
-        "doctor",
-        "intern",
-        "sacred",
-        "heart",
-        "scrubs",
-        "daydream",
-        "surgery",
-        "eagle",
-        "vanilla"
-      ]
-    },
     "Seinfeld": {
       "character_words": [
         "jerry",
@@ -3926,6 +3196,56 @@
         "coat",
         "scarf",
         "london"
+      ]
+    },
+    "Sister, Sister": {
+      "character_words": [
+        "tia",
+        "tamera",
+        "ray",
+        "lisa",
+        "roger",
+        "tyreke",
+        "diavian",
+        "jordan",
+        "victor",
+        "terrence"
+      ],
+      "defining_words": [
+        "twins",
+        "separated",
+        "reunion",
+        "family",
+        "detroit",
+        "school",
+        "comedy",
+        "sisters",
+        "adoption"
+      ]
+    },
+    "Smart Guy": {
+      "character_words": [
+        "marcus",
+        "henderson",
+        "floyd",
+        "yvette",
+        "taj",
+        "morris",
+        "walker",
+        "craig",
+        "nina",
+        "mackey"
+      ],
+      "defining_words": [
+        "genius",
+        "prodigy",
+        "highschool",
+        "family",
+        "widower",
+        "smart",
+        "grades",
+        "nerd",
+        "brothers"
       ]
     },
     "Stranger Things": {
@@ -4006,6 +3326,31 @@
         "manhattan"
       ]
     },
+    "The Bernie Mac Show": {
+      "character_words": [
+        "bernie",
+        "mac",
+        "wanda",
+        "vanessa",
+        "jordan",
+        "bryana",
+        "bryanna",
+        "baby",
+        "girl",
+        "kelly"
+      ],
+      "defining_words": [
+        "comedian",
+        "uncle",
+        "guardian",
+        "nieces",
+        "nephew",
+        "parenting",
+        "chicago",
+        "comedy",
+        "family"
+      ]
+    },
     "The Big Bang Theory": {
       "character_words": [
         "sheldon",
@@ -4030,57 +3375,6 @@
         "knock",
         "soft",
         "kitty"
-      ]
-    },
-    "The Blacklist": {
-      "character_words": [
-        "raymond",
-        "reddington",
-        "elizabeth",
-        "keen",
-        "dembe",
-        "ressler",
-        "cooper",
-        "aram",
-        "samar",
-        "kaplan"
-      ],
-      "defining_words": [
-        "blacklist",
-        "criminal",
-        "task",
-        "force",
-        "informant",
-        "concierge",
-        "crime",
-        "fugitive",
-        "fedora",
-        "mystery"
-      ]
-    },
-    "The Boondocks": {
-      "character_words": [
-        "huey",
-        "riley",
-        "granddad",
-        "robert",
-        "ruckus",
-        "jazmine",
-        "tom",
-        "sarah",
-        "cindy",
-        "hiro"
-      ],
-      "defining_words": [
-        "woodcrest",
-        "samurai",
-        "gangstalici",
-        "belt",
-        "afro",
-        "suburb",
-        "freeman",
-        "nunchucks",
-        "kickball"
       ]
     },
     "The Boys": {
@@ -4161,6 +3455,31 @@
         "opa"
       ]
     },
+    "The Fresh Prince of Bel-Air": {
+      "character_words": [
+        "will",
+        "smith",
+        "carlton",
+        "banks",
+        "hillary",
+        "ashley",
+        "vivian",
+        "philip",
+        "geoffrey",
+        "jazz"
+      ],
+      "defining_words": [
+        "philadelphia",
+        "mansion",
+        "uncle",
+        "wealthy",
+        "culture",
+        "clash",
+        "butler",
+        "comedy",
+        "cousin"
+      ]
+    },
     "The Handmaid's Tale": {
       "character_words": [
         "june",
@@ -4185,32 +3504,6 @@
         "under",
         "his",
         "eye"
-      ]
-    },
-    "The Last of Us": {
-      "character_words": [
-        "joel",
-        "ellie",
-        "tess",
-        "tommy",
-        "maria",
-        "bill",
-        "frank",
-        "kathleen",
-        "henry",
-        "sam"
-      ],
-      "defining_words": [
-        "infected",
-        "zombie",
-        "cordyceps",
-        "apocalypse",
-        "survivor",
-        "quarantine",
-        "zone",
-        "firefly",
-        "clicker",
-        "fungus"
       ]
     },
     "The Mandalorian": {
@@ -4265,6 +3558,31 @@
         "battlestar"
       ]
     },
+    "The Parkers": {
+      "character_words": [
+        "nikki",
+        "parker",
+        "kim",
+        "professor",
+        "oglevee",
+        "stevie",
+        "thaddeus",
+        "andell",
+        "johnnie",
+        "veronica"
+      ],
+      "defining_words": [
+        "college",
+        "mother",
+        "daughter",
+        "santa",
+        "monica",
+        "comedy",
+        "campus",
+        "romance",
+        "student"
+      ]
+    },
     "The Simpsons": {
       "character_words": [
         "homer",
@@ -4317,6 +3635,31 @@
         "crew"
       ]
     },
+    "The Steve Harvey Show": {
+      "character_words": [
+        "steve",
+        "hightower",
+        "cedric",
+        "robinson",
+        "lovita",
+        "jenkins",
+        "regina",
+        "bullethead",
+        "lydia",
+        "booker"
+      ],
+      "defining_words": [
+        "teacher",
+        "music",
+        "chicago",
+        "highschool",
+        "comedy",
+        "principal",
+        "students",
+        "education",
+        "friendship"
+      ]
+    },
     "The Walking Dead": {
       "character_words": [
         "rick",
@@ -4341,6 +3684,31 @@
         "saviors",
         "crossbow",
         "lucille"
+      ]
+    },
+    "The Wayans Bros.": {
+      "character_words": [
+        "shawn",
+        "marlon",
+        "wayans",
+        "pops",
+        "john",
+        "dee",
+        "baxter",
+        "lou",
+        "malak",
+        "lisa"
+      ],
+      "defining_words": [
+        "brothers",
+        "harlem",
+        "newsstand",
+        "building",
+        "comedy",
+        "family",
+        "business",
+        "apartment",
+        "schemes"
       ]
     },
     "The Wire": {
@@ -4421,32 +3789,6 @@
         "time"
       ]
     },
-    "Vikings": {
-      "character_words": [
-        "ragnar",
-        "lothbrok",
-        "lagertha",
-        "bjorn",
-        "rollo",
-        "floki",
-        "athelstan",
-        "ivar",
-        "ecbert",
-        "aslaug"
-      ],
-      "defining_words": [
-        "viking",
-        "norse",
-        "raid",
-        "shield",
-        "warrior",
-        "longboat",
-        "valhalla",
-        "earl",
-        "axe",
-        "kattegat"
-      ]
-    },
     "Westworld": {
       "character_words": [
         "dolores",
@@ -4471,32 +3813,6 @@
         "awareness",
         "awakening",
         "reverie"
-      ]
-    },
-    "White Lotus": {
-      "character_words": [
-        "tanya",
-        "harper",
-        "ethan",
-        "daphne",
-        "cameron",
-        "portia",
-        "albie",
-        "valentina",
-        "lucia",
-        "mia"
-      ],
-      "defining_words": [
-        "resort",
-        "hotel",
-        "vacation",
-        "luxury",
-        "wealthy",
-        "sicily",
-        "hawaii",
-        "drama",
-        "guest",
-        "beach"
       ]
     }
   },
@@ -4532,51 +3848,49 @@
         "yakko",
         "wakko",
         "dot",
+        "warner",
         "pinky",
         "brain",
         "slappy",
         "skippy",
-        "ralph",
-        "scratchaniff",
+        "buttons",
         "mindy"
       ],
       "defining_words": [
-        "tower",
-        "warner",
         "zany",
+        "watertower",
+        "studio",
         "cartoon",
-        "sibling",
-        "acme",
         "world",
         "wacky",
-        "mouse",
-        "nations"
+        "toon",
+        "burbank",
+        "chaos"
       ]
     },
     "Arthur": {
       "character_words": [
         "arthur",
-        "francine",
         "buster",
+        "francine",
         "muffy",
         "binky",
         "brain",
+        "fern",
         "sue",
         "ellen",
-        "fern",
-        "ratburn"
+        "read"
       ],
       "defining_words": [
         "aardvark",
-        "library",
-        "school",
         "elwood",
         "city",
-        "read",
+        "library",
+        "school",
         "glasses",
-        "friend",
-        "sweater",
-        "teacher"
+        "friends",
+        "homework",
+        "family"
       ]
     },
     "Avatar: The Last Airbender": {
@@ -4610,22 +3924,22 @@
         "batman",
         "bruce",
         "wayne",
+        "robin",
         "joker",
         "harley",
         "quinn",
-        "robin",
-        "alfred",
         "gordon",
-        "bullock"
+        "alfred",
+        "clayface"
       ],
       "defining_words": [
         "gotham",
         "dark",
         "knight",
-        "batmobile",
-        "cape",
-        "gadget",
+        "batcave",
+        "batarang",
         "villain",
+        "cape",
         "arkham",
         "asylum",
         "detective"
@@ -4651,7 +3965,6 @@
         "hero",
         "watch",
         "plumber",
-        "dna",
         "ultimate",
         "power",
         "ten"
@@ -4673,14 +3986,13 @@
       "defining_words": [
         "burger",
         "restaurant",
-        "grill",
-        "patty",
         "family",
-        "bunny",
+        "grill",
+        "spatula",
+        "special",
         "ears",
-        "groans",
-        "keyboard",
-        "wharf"
+        "wharf",
+        "patty"
       ]
     },
     "Chowder": {
@@ -4688,25 +4000,24 @@
         "chowder",
         "mung",
         "daal",
-        "schnitzel",
         "truffles",
+        "shnitzel",
         "panini",
         "endive",
-        "gorgonzola",
         "gazpacho",
-        "ceviche"
+        "gorgonzola",
+        "kimchi"
       ],
       "defining_words": [
         "chef",
-        "apprentice",
+        "cooking",
         "kitchen",
         "recipe",
-        "cook",
-        "catering",
+        "apprentice",
         "food",
-        "radda",
-        "market",
-        "smell"
+        "catering",
+        "marzipan",
+        "city"
       ]
     },
     "Codename: Kids Next Door": {
@@ -4816,27 +4127,26 @@
     "Daria": {
       "character_words": [
         "daria",
-        "morgendorff",
         "jane",
-        "lane",
         "quinn",
         "trent",
         "jodie",
-        "mack",
+        "brittany",
         "kevin",
-        "brittany"
+        "jake",
+        "helen",
+        "mack"
       ],
       "defining_words": [
-        "sarcastic",
         "high",
         "school",
-        "lawndale",
-        "glasses",
+        "sarcasm",
         "misery",
         "chick",
-        "fashion",
-        "club",
-        "sick"
+        "lawndale",
+        "glasses",
+        "artist",
+        "cynical"
       ]
     },
     "Dexter's Laboratory": {
@@ -4865,32 +4175,6 @@
         "lab"
       ]
     },
-    "Dragon Ball Z": {
-      "character_words": [
-        "goku",
-        "gohan",
-        "vegeta",
-        "trunks",
-        "piccolo",
-        "krillin",
-        "frieza",
-        "cell",
-        "bulma",
-        "goten"
-      ],
-      "defining_words": [
-        "saiyan",
-        "super",
-        "kamehameha",
-        "dragon",
-        "ball",
-        "fusion",
-        "power",
-        "level",
-        "senzu",
-        "beam"
-      ]
-    },
     "DuckTales": {
       "character_words": [
         "scrooge",
@@ -4913,8 +4197,7 @@
         "treasure",
         "nephew",
         "gold",
-        "coin",
-        "adventure"
+        "coin"
       ]
     },
     "Ed, Edd n Eddy": {
@@ -4974,25 +4257,24 @@
         "fry",
         "leela",
         "bender",
-        "professor",
         "farnsworth",
         "zoidberg",
         "amy",
         "hermes",
         "zapp",
+        "brannigan",
         "kif"
       ],
       "defining_words": [
         "future",
         "robot",
-        "spaceship",
+        "space",
         "delivery",
+        "new",
+        "york",
         "planet",
         "express",
-        "cryogenic",
-        "beer",
-        "nibbler",
-        "year"
+        "ship"
       ]
     },
     "Gargoyles": {
@@ -5000,25 +4282,24 @@
         "goliath",
         "elisa",
         "brooklyn",
-        "hudson",
         "lexington",
         "broadway",
+        "hudson",
         "demona",
         "xanatos",
-        "bronx",
+        "puck",
         "angela"
       ],
       "defining_words": [
-        "gargoyle",
         "stone",
+        "gargoyle",
         "night",
         "manhattan",
         "castle",
-        "wing",
         "clan",
-        "glide",
-        "sunrise",
-        "statue"
+        "wings",
+        "protect",
+        "curse"
       ]
     },
     "Gravity Falls": {
@@ -5031,8 +4312,7 @@
         "bill",
         "cipher",
         "pacifica",
-        "gideon",
-        "robbie"
+        "gideon"
       ],
       "defining_words": [
         "mystery",
@@ -5055,21 +4335,20 @@
         "nicole",
         "richard",
         "penny",
-        "carrie",
         "tobias",
+        "carrie",
         "banana",
         "joe"
       ],
       "defining_words": [
+        "elmore",
         "cat",
         "fish",
         "rabbit",
-        "elmore",
+        "cartoon",
+        "chaos",
         "school",
         "family",
-        "cartoon",
-        "walk",
-        "rainbow",
         "weird"
       ]
     },
@@ -5080,11 +4359,11 @@
         "gerald",
         "phoebe",
         "grandpa",
-        "grandma",
-        "stinky",
+        "harold",
         "sid",
+        "stinky",
         "rhonda",
-        "harold"
+        "curly"
       ],
       "defining_words": [
         "football",
@@ -5095,34 +4374,32 @@
         "house",
         "locket",
         "urban",
-        "sunset",
-        "arms"
+        "jungle"
       ]
     },
     "Invader Zim": {
       "character_words": [
         "zim",
-        "gir",
         "dib",
         "gaz",
-        "membrane",
+        "gir",
         "tallest",
-        "skoodge",
+        "purple",
+        "red",
+        "membrane",
         "tak",
-        "minimoose",
-        "almighty"
+        "minimoose"
       ],
       "defining_words": [
         "alien",
         "invader",
         "robot",
-        "earth",
-        "disguise",
         "irken",
+        "disguise",
         "doom",
+        "earth",
         "taco",
-        "paranormal",
-        "waffles"
+        "paranormal"
       ]
     },
     "Johnny Bravo": {
@@ -5158,23 +4435,22 @@
         "wonder",
         "woman",
         "flash",
-        "lantern",
         "aquaman",
-        "hawkgirl",
+        "lantern",
         "martian",
-        "cyborg"
+        "hawk",
+        "girl"
       ],
       "defining_words": [
+        "hero",
         "league",
-        "superhero",
-        "watchtower",
         "justice",
-        "villain",
-        "power",
+        "watchtower",
+        "cape",
+        "powers",
         "team",
-        "metropolis",
-        "gotham",
-        "hall"
+        "villain",
+        "metropolis"
       ]
     },
     "Kim Possible": {
@@ -5213,20 +4489,19 @@
         "bill",
         "boomhauer",
         "luanne",
-        "khan",
-        "cotton"
+        "cotton",
+        "ladybird"
       ],
       "defining_words": [
         "propane",
         "texas",
         "arlen",
         "alley",
-        "lawn",
         "beer",
+        "lawn",
         "grill",
-        "strickland",
-        "truck",
-        "narrow"
+        "mower",
+        "accent"
       ]
     },
     "Looney Tunes": {
@@ -5260,25 +4535,24 @@
         "marinette",
         "adrien",
         "ladybug",
-        "chat",
         "noir",
+        "chat",
         "alya",
-        "nino",
         "tikki",
         "plagg",
-        "hawkmoth"
+        "hawkmoth",
+        "chloe"
       ],
       "defining_words": [
         "miraculous",
-        "kwami",
         "paris",
+        "kwami",
         "superhero",
-        "akuma",
         "mask",
-        "earring",
-        "ring",
-        "transform",
-        "yoyo"
+        "earrings",
+        "akuma",
+        "yoyo",
+        "transform"
       ]
     },
     "My Little Pony": {
@@ -5290,21 +4564,20 @@
         "pinkie",
         "pie",
         "rarity",
-        "applejack",
         "fluttershy",
+        "applejack",
         "spike"
       ],
       "defining_words": [
         "pony",
-        "magic",
-        "friendship",
         "equestria",
-        "unicorn",
-        "pegasus",
-        "castle",
+        "friendship",
+        "magic",
         "cutie",
         "mark",
-        "harmony"
+        "pegasus",
+        "unicorn",
+        "princess"
       ]
     },
     "Phineas and Ferb": {
@@ -5359,6 +4632,31 @@
         "dude"
       ]
     },
+    "Rugrats": {
+      "character_words": [
+        "tommy",
+        "chuckie",
+        "phil",
+        "lil",
+        "angelica",
+        "dil",
+        "susie",
+        "stu",
+        "didi",
+        "reptar"
+      ],
+      "defining_words": [
+        "baby",
+        "diaper",
+        "playpen",
+        "adventure",
+        "pickles",
+        "toddler",
+        "screwdriver",
+        "cynthia",
+        "cookie"
+      ]
+    },
     "Rick and Morty": {
       "character_words": [
         "rick",
@@ -5409,32 +4707,6 @@
         "life",
         "comic",
         "store"
-      ]
-    },
-    "Rugrats": {
-      "character_words": [
-        "tommy",
-        "chuckie",
-        "phil",
-        "lil",
-        "angelica",
-        "dil",
-        "spike",
-        "stu",
-        "didi",
-        "cynthia"
-      ],
-      "defining_words": [
-        "baby",
-        "diaper",
-        "playpen",
-        "screwdriver",
-        "reptar",
-        "adventure",
-        "toddler",
-        "pickle",
-        "imagination",
-        "cookie"
       ]
     },
     "Samurai Jack": {
@@ -5497,48 +4769,46 @@
         "bow",
         "hordak",
         "entrapta",
-        "mermista",
         "scorpia",
-        "perfuma",
-        "frosta"
+        "mermista",
+        "frosta",
+        "perfuma"
       ],
       "defining_words": [
         "princess",
         "power",
         "etheria",
         "sword",
-        "rebellion",
         "horde",
-        "magic",
+        "rebellion",
         "transform",
-        "castle",
-        "bright"
+        "magic",
+        "heart"
       ]
     },
     "South Park": {
       "character_words": [
-        "stan",
-        "kyle",
         "cartman",
+        "kyle",
+        "stan",
         "kenny",
         "butters",
+        "wendy",
         "randy",
         "chef",
-        "garrison",
-        "wendy",
+        "timmy",
         "tweek"
       ],
       "defining_words": [
         "colorado",
-        "elementary",
-        "snow",
-        "mountain",
-        "killed",
-        "kenny",
         "town",
+        "snow",
         "satire",
-        "parka",
-        "bus"
+        "crude",
+        "animation",
+        "bus",
+        "stop",
+        "parka"
       ]
     },
     "SpongeBob SquarePants": {
@@ -5591,32 +4861,6 @@
         "diamond",
         "warp",
         "pad"
-      ]
-    },
-    "Teen Titans": {
-      "character_words": [
-        "robin",
-        "starfire",
-        "raven",
-        "beast",
-        "boy",
-        "cyborg",
-        "slade",
-        "terra",
-        "jinx",
-        "blackfire"
-      ],
-      "defining_words": [
-        "teen",
-        "titans",
-        "tower",
-        "superhero",
-        "villain",
-        "power",
-        "team",
-        "jump",
-        "city",
-        "hero"
       ]
     },
     "The Angry Beavers": {
@@ -5773,6 +5017,31 @@
         "villain",
         "spoon",
         "nigh"
+      ]
+    },
+    "Teen Titans": {
+      "character_words": [
+        "robin",
+        "starfire",
+        "raven",
+        "cyborg",
+        "beast",
+        "boy",
+        "terra",
+        "slade",
+        "jinx",
+        "aqualad"
+      ],
+      "defining_words": [
+        "titan",
+        "tower",
+        "hero",
+        "team",
+        "jump",
+        "city",
+        "powers",
+        "villain",
+        "cape"
       ]
     },
     "Tom and Jerry": {

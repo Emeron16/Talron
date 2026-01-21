@@ -11,17 +11,20 @@ class TopicSelectionScreen(BaseScreen):
     """Screen for selecting game topic and subtopic."""
 
     def __init__(self, parent: MainWindow, word_database: WordDatabase,
-                 on_selection_complete: Callable[[str, str], None]):
+                 on_selection_complete: Callable[[str, str], None],
+                 achievement_manager=None):
         """Initialize the topic selection screen.
 
         Args:
             parent: Parent MainWindow instance.
             word_database: Word database for available topics.
             on_selection_complete: Callback when topic and subtopic are selected.
+            achievement_manager: Optional AchievementManager for displaying stars.
         """
         super().__init__(parent)
         self.word_database = word_database
         self.on_selection_complete = on_selection_complete
+        self.achievement_manager = achievement_manager
 
         self.selected_topic: Optional[str] = None
         self.selected_subtopic: Optional[str] = None
@@ -51,8 +54,9 @@ class TopicSelectionScreen(BaseScreen):
         nav_frame.grid_columnconfigure(0, weight=0)  # Quit button
         nav_frame.grid_columnconfigure(1, weight=0)  # Help button
         nav_frame.grid_columnconfigure(2, weight=0)  # Music button
-        nav_frame.grid_columnconfigure(3, weight=1)  # Spacer
-        nav_frame.grid_columnconfigure(4, weight=0)  # Continue button
+        nav_frame.grid_columnconfigure(3, weight=0)  # Reset Achievements button
+        nav_frame.grid_columnconfigure(4, weight=1)  # Spacer
+        nav_frame.grid_columnconfigure(5, weight=0)  # Continue button
 
         # Create buttons with nav_frame as parent (not self) to avoid geometry manager conflict
         back_button = ttk.Button(
@@ -86,13 +90,23 @@ class TopicSelectionScreen(BaseScreen):
             music_btn.grid(row=0, column=2, padx=5, sticky='w')
             self.music_display_button = music_btn
 
+        # Reset Achievements button (only if achievement manager exists)
+        if self.achievement_manager:
+            reset_button = ttk.Button(
+                nav_frame,
+                text="Reset Achievements",
+                command=self._on_reset_achievements,
+                style='Secondary.TButton'
+            )
+            reset_button.grid(row=0, column=3, padx=5, sticky='w')
+
         self.continue_button = ttk.Button(
             nav_frame,
             text="Continue to Settings →",
             command=self._on_continue,
             style='Primary.TButton'
         )
-        self.continue_button.grid(row=0, column=4, padx=5, sticky='e')
+        self.continue_button.grid(row=0, column=5, padx=5, sticky='e')
         self.continue_button.configure(state='disabled')
 
         # Title - pack after nav
@@ -255,6 +269,25 @@ class TopicSelectionScreen(BaseScreen):
         # Default: just capitalize
         return subtopic.title()
 
+    def _format_star_display(self, achievement: dict) -> str:
+        """Format star display for achievement.
+
+        Args:
+            achievement: Achievement dictionary with 'highest_star_level' and 'star_color'.
+
+        Returns:
+            Formatted star string (e.g., "⭐⭐⭐" or "☆☆").
+        """
+        star_level = achievement.get('highest_star_level', 0)
+        star_color = achievement.get('star_color', 'none')
+
+        # Use emoji stars for visual appeal
+        # Gold: ⭐ (U+2B50) - filled star emoji
+        # Silver: ☆ (U+2606) - white star
+        star_char = '⭐' if star_color == 'gold' else '☆'
+
+        return star_char * star_level
+
     def _create_subtopic_buttons(self, topic: str, num_columns: Optional[int] = None):
         """Create buttons for subtopics of the selected topic.
 
@@ -282,6 +315,15 @@ class TopicSelectionScreen(BaseScreen):
 
             # Format subtopic name for display
             display_name = self._format_subtopic_name(subtopic)
+
+            # Add stars if achievement exists
+            if self.achievement_manager and self.selected_topic:
+                achievement = self.achievement_manager.get_achievement(
+                    self.selected_topic, subtopic
+                )
+                if achievement:
+                    star_display = self._format_star_display(achievement)
+                    display_name = f"{display_name} {star_display}"
 
             btn = ttk.Button(
                 self.subtopic_buttons_frame,
@@ -410,6 +452,174 @@ class TopicSelectionScreen(BaseScreen):
         """Handle quit button click."""
         if self.parent.ask_yes_no("Quit", "Are you sure you want to quit?"):
             self.parent.destroy()
+
+    def _on_reset_achievements(self):
+        """Handle reset achievements button click."""
+        if not self.achievement_manager:
+            return
+
+        # Show confirmation popup
+        self._show_reset_confirmation_popup()
+
+    def _show_reset_confirmation_popup(self):
+        """Display reset confirmation in an overlay window."""
+        # Create overlay frame
+        overlay = tk.Frame(self, bg='#000000', bd=2, relief=tk.RAISED)
+        overlay.place(relx=0.5, rely=0.5, anchor='center', width=500, height=300)
+
+        # Inner frame with dark background
+        inner_frame = tk.Frame(overlay, bg='#1a1a2e', padx=30, pady=30)
+        inner_frame.pack(fill=tk.BOTH, expand=True)
+
+        # Title
+        title_label = ttk.Label(
+            inner_frame,
+            text="⚠️ Reset Achievements",
+            style='Header.TLabel',
+            font=('Segoe UI', 18, 'bold')
+        )
+        title_label.pack(pady=(0, 20))
+
+        # Warning message
+        message_label = ttk.Label(
+            inner_frame,
+            text="Are you sure you want to reset all achievements?\n\n"
+                 "This will delete all your progress and cannot be undone.",
+            font=('Segoe UI', 12),
+            justify=tk.CENTER,
+            wraplength=400
+        )
+        message_label.pack(pady=(0, 30))
+
+        # Button frame
+        button_frame = tk.Frame(inner_frame, bg='#1a1a2e')
+        button_frame.pack()
+
+        # Cancel button
+        cancel_button = ttk.Button(
+            button_frame,
+            text="Cancel",
+            command=lambda: overlay.destroy(),
+            style='Secondary.TButton'
+        )
+        cancel_button.pack(side=tk.LEFT, padx=10)
+
+        # Confirm button
+        confirm_button = ttk.Button(
+            button_frame,
+            text="Reset All Achievements",
+            command=lambda: self._perform_reset(overlay),
+            style='Primary.TButton'
+        )
+        confirm_button.pack(side=tk.LEFT, padx=10)
+
+        # Bind Escape to cancel
+        overlay.bind('<Escape>', lambda e: overlay.destroy())
+        overlay.focus_set()
+
+    def _perform_reset(self, overlay):
+        """Perform the actual reset and show success message.
+
+        Args:
+            overlay: The confirmation overlay to destroy.
+        """
+        overlay.destroy()
+
+        success = self.achievement_manager.reset_achievements()
+        if success:
+            # Refresh the display to remove stars
+            if self.selected_topic:
+                self._create_subtopic_buttons(self.selected_topic)
+            self._show_reset_success_popup()
+        else:
+            self._show_reset_error_popup()
+
+    def _show_reset_success_popup(self):
+        """Display success message in an overlay window."""
+        # Create overlay frame
+        overlay = tk.Frame(self, bg='#000000', bd=2, relief=tk.RAISED)
+        overlay.place(relx=0.5, rely=0.5, anchor='center', width=400, height=200)
+
+        # Inner frame with dark background
+        inner_frame = tk.Frame(overlay, bg='#1a1a2e', padx=30, pady=30)
+        inner_frame.pack(fill=tk.BOTH, expand=True)
+
+        # Title
+        title_label = ttk.Label(
+            inner_frame,
+            text="✓ Reset Complete",
+            style='Header.TLabel',
+            font=('Segoe UI', 18, 'bold')
+        )
+        title_label.pack(pady=(0, 20))
+
+        # Message
+        message_label = ttk.Label(
+            inner_frame,
+            text="All achievements have been reset.",
+            font=('Segoe UI', 12),
+            justify=tk.CENTER
+        )
+        message_label.pack(pady=(0, 20))
+
+        # Close button
+        close_button = ttk.Button(
+            inner_frame,
+            text="OK",
+            command=lambda: overlay.destroy(),
+            style='Primary.TButton'
+        )
+        close_button.pack()
+
+        # Auto-dismiss after 3 seconds
+        self.after(3000, lambda: overlay.destroy() if overlay.winfo_exists() else None)
+
+        # Bind Escape and Enter to close
+        overlay.bind('<Escape>', lambda e: overlay.destroy())
+        overlay.bind('<Return>', lambda e: overlay.destroy())
+        overlay.focus_set()
+
+    def _show_reset_error_popup(self):
+        """Display error message in an overlay window."""
+        # Create overlay frame
+        overlay = tk.Frame(self, bg='#000000', bd=2, relief=tk.RAISED)
+        overlay.place(relx=0.5, rely=0.5, anchor='center', width=400, height=200)
+
+        # Inner frame with dark background
+        inner_frame = tk.Frame(overlay, bg='#1a1a2e', padx=30, pady=30)
+        inner_frame.pack(fill=tk.BOTH, expand=True)
+
+        # Title
+        title_label = ttk.Label(
+            inner_frame,
+            text="❌ Error",
+            style='Header.TLabel',
+            font=('Segoe UI', 18, 'bold')
+        )
+        title_label.pack(pady=(0, 20))
+
+        # Message
+        message_label = ttk.Label(
+            inner_frame,
+            text="Failed to reset achievements.\nPlease check the console for details.",
+            font=('Segoe UI', 12),
+            justify=tk.CENTER
+        )
+        message_label.pack(pady=(0, 20))
+
+        # Close button
+        close_button = ttk.Button(
+            inner_frame,
+            text="OK",
+            command=lambda: overlay.destroy(),
+            style='Primary.TButton'
+        )
+        close_button.pack()
+
+        # Bind Escape and Enter to close
+        overlay.bind('<Escape>', lambda e: overlay.destroy())
+        overlay.bind('<Return>', lambda e: overlay.destroy())
+        overlay.focus_set()
 
     def reset(self):
         """Reset the screen to initial state."""
